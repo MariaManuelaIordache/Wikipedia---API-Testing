@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "60206bb4-17ef-4388-82cb-46caffa980de",
+		"name": "Wikipedia-APITesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wiki Main Page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 600ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.header('Content-Type','text/html; charset=UTF-8');\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Wikipedia, the free encyclopedia\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://en.wikipedia.org/wiki/Main_Page",
+					"protocol": "https",
+					"host": [
+						"en",
+						"wikipedia",
+						"org"
+					],
+					"path": [
+						"wiki",
+						"Main_Page"
+					]
+				},
+				"description": "Testing scope:\n- status code 200\n- response time < 600 ms\n- response type - HTML\n- response body - containts title \"Wikipedia, the free encyclopedia\""
+			},
+			"response": []
+		}
+	]
+}

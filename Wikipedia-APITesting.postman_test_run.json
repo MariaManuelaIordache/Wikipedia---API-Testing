@@ -1,0 +1,67 @@
+{
+	"id": "016c93de-5cda-4575-8000-9568e94c9b40",
+	"name": "Wikipedia-APITesting",
+	"timestamp": "2021-04-12T12:27:54.350Z",
+	"collection_id": "60206bb4-17ef-4388-82cb-46caffa980de",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7469382e-aaf4-4270-8eba-156bedb360c5",
+			"name": "Wiki Main Page",
+			"url": "https://en.wikipedia.org/wiki/Main_Page",
+			"time": 249,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 600ms": true,
+				"Body is correct": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				249
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 600ms": true,
+					"Body is correct": true,
+					"Body matches string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 249,
+	"collection": {
+		"requests": [
+			{
+				"id": "7469382e-aaf4-4270-8eba-156bedb360c5",
+				"method": "GET"
+			}
+		]
+	}
+}
